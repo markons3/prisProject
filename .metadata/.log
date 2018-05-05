@@ -18,3 +18,144 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-05-05 00:26:42.127
 !MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v8.5 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+!SESSION 2018-05-05 12:04:39.961 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-05 12:04:54.603
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Marko'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-05-05 12:10:46.656
+!MESSAGE An internal error occurred during: "Loading descriptor for PrisProject.".
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/PrisProject/WebContent/WEB-INF/web.xml; systemId: platform:/resource/PrisProject/WebContent/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1064)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelResource(JEE5ModelProvider.java:185)
+	at org.eclipse.jst.jee.model.internal.Web25ModelProvider.getModelObject(Web25ModelProvider.java:44)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelObject(JEE5ModelProvider.java:231)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.getLastModificationTimeOfDDFile(AbstractMergedModelProvider.java:235)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.hasToReloadModel(AbstractMergedModelProvider.java:229)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.loadProviders(AbstractMergedModelProvider.java:256)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.access$2(AbstractMergedModelProvider.java:255)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider$LoadModelsWorkspaceRunnable.run(AbstractMergedModelProvider.java:278)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.loadModel(AbstractMergedModelProvider.java:249)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.getMergedModel(AbstractMergedModelProvider.java:219)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider.getModelObject(AbstractMergedModelProvider.java:139)
+	at org.eclipse.jst.jee.ui.internal.navigator.Web25ContentProvider.getNewContentProviderInstance(Web25ContentProvider.java:69)
+	at org.eclipse.jst.jee.ui.internal.navigator.LoadingJeeDDJob.run(LoadingJeeDDJob.java:50)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/PrisProject/WebContent/WEB-INF/web.xml; systemId: platform:/resource/PrisProject/WebContent/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1297)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.demandLoad(ProjectResourceSetImpl.java:811)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 17 more
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-05 12:12:02.302
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-05 12:12:02.303
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-05-05 12:14:23.205
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v8.5 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-05-05 12:15:01.006
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v8.5 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-05 12:35:08.865
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-05 12:35:08.867
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.touchpoint.natives 2 0 2018-05-05 13:00:27.392
+!MESSAGE Could not remove temporary backup directory (it is safe to manually delete it and its contents): C:\Users\Marko\AppData\Local\Temp\epp.package.jee_2c65feb65580_c0a80167cdfe
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-05 13:01:10.642
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-05 13:01:10.644
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-05-05 13:01:10.701
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Core Exception [code 275] A resource exists with a different case: '/PrisProject/src/Beans'.
+	at org.eclipse.jdt.internal.core.JavaModelOperation.createFolder(JavaModelOperation.java:293)
+	at org.eclipse.jdt.internal.core.CreatePackageFragmentOperation.executeOperation(CreatePackageFragmentOperation.java:89)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:795)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.createPackageFragment(PackageFragmentRoot.java:302)
+	at org.eclipse.jdt.ui.wizards.NewTypeWizardPage.createType(NewTypeWizardPage.java:2110)
+	at org.eclipse.jdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:65)
+	at org.eclipse.jdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:120)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5609)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:105)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/PrisProject/src/Beans'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:323)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:301)
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:30)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:93)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.createFolder(JavaModelOperation.java:287)
+	at org.eclipse.jdt.internal.core.CreatePackageFragmentOperation.executeOperation(CreatePackageFragmentOperation.java:89)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:795)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.createPackageFragment(PackageFragmentRoot.java:302)
+	at org.eclipse.jdt.ui.wizards.NewTypeWizardPage.createType(NewTypeWizardPage.java:2110)
+	at org.eclipse.jdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:65)
+	at org.eclipse.jdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:120)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5609)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:105)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2018-05-05 13:01:10.702
+!MESSAGE A resource exists with a different case: '/PrisProject/src/Beans'.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-05 13:01:29.078
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-05 13:01:29.080
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
