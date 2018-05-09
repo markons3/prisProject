@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en"
-	xmlns="http://www.w3.org/1999/xhtml"
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 
@@ -10,16 +9,22 @@
 </h:head>
 <h:body>
 	<h:form>
-		<h:inputText id="username" value="#{username}"
-			a:placeholder="Username" />
-		<br />
-		<br />
-		<h:inputSecret id="password" value="#{password}"
-			a:placeholder="Password" />
-		<br />
-		<br />
-		<h:commandButton value="Submit" action="response" />
+		<table>
+			<tr>
+				<td><h:inputText id="username" value="#{username}"
+						a:placeholder="Username" /></td>
+			</tr>
+			<tr>
+				<td><h:inputSecret id="password" value="#{password}"
+						a:placeholder="Password" /></td>
+			</tr>
+			<tr>
+				<td><h:commandButton value="Submit" action="response" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLink value="homePage.xhtml">Home Page</h:outputLink></td>
+			</tr>
+		</table>
 	</h:form>
 </h:body>
-
 </html>
