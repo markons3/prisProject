@@ -6,6 +6,7 @@ import javax.faces.bean.ManagedBean;
 public class User {
 	private String username;
 	private String password;
+	private Integer isAdmin;
 	
 	public User() {
 		
@@ -27,5 +28,19 @@ public class User {
 		this.password = password;
 	}
 	
+	public Integer getIsAdmin() {
+		return isAdmin;
+	}
+
+	public void setIsAdmin(Integer isAdmin) {
+		this.isAdmin = isAdmin;
+	}
+
+	public boolean isAdminUser(Integer isAdmin) {
+		if (isAdmin == 1) {
+			return true;
+		}
+		return false;
+	}
 
 }
