@@ -11,41 +11,45 @@ public class Book {
 	private String field;
 	private String descritption;
 	
-	public Book() {
-		
+	public Book(String title, String author, String field, String descritption) {
+		this.title = title;
+		this.author = author;
+		this.field = field;
+		this.descritption = descritption;
 	}
 
-	public String getNaslov() {
+	public String getTitle() {
 		return title;
 	}
 
-	public void setNaslov(String title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	public String getAutor() {
+	public String getAuthor() {
 		return author;
 	}
 
-	public void setAutor(String autor) {
-		this.author = autor;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 
-	public String getOblast() {
+	public String getField() {
 		return field;
 	}
 
-	public void setOblast(String field) {
+	public void setField(String field) {
 		this.field = field;
 	}
 
-	public String getOpis() {
+	public String getDescritption() {
 		return descritption;
 	}
 
-	public void setOpis(String descritption) {
+	public void setDescritption(String descritption) {
 		this.descritption = descritption;
 	}
+
 	
 	
 }
