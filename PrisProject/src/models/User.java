@@ -1,19 +1,43 @@
 package models;
 
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean
-@ApplicationScoped
 public class User {
+	private int id;
 	private String firstName;
 	private String lastName;
 	private String username;
 	private String password;
 	private Integer isAdmin;
 	
-	public User() {
-		
+
+	public User(Integer id, String firstName, String lastName, String username, String password, Integer isAdmin) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.username = username;
+		this.password = password;
+		this.isAdmin = isAdmin;
+	}
+
+	
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public Integer getIsAdmin() {
+		return isAdmin;
+	}
+
+	public void setIsAdmin(Integer isAdmin) {
+		this.isAdmin = isAdmin;
 	}
 
 	public String getUsername() {
@@ -32,14 +56,6 @@ public class User {
 		this.password = password;
 	}
 	
-	public Integer getIsAdmin() {
-		return isAdmin;
-	}
-
-	public void setIsAdmin(Integer isAdmin) {
-		this.isAdmin = isAdmin;
-	}
-
 	
 	public String getFirstName() {
 		return firstName;
@@ -57,7 +73,7 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public boolean isAdministrator(Integer isAdmin) {
+	public boolean isAdministrator() {
 		if (isAdmin == 1) {
 			return true;
 		}
