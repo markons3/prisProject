@@ -46,9 +46,24 @@ public class UserController {
 			
 			// add error message for JSF page
 			addErrorMessage(exc);
+			
 		}
+		
 	}
 				
+	public String addUser(User user) {
+		logger.info("Adding user: " + user);
+		try {
+			userDbUtil.addUser(user);
+		} catch (Exception e) {
+			logger.log(Level.SEVERE, "Error adding user", e);
+			addErrorMessage(e);
+			return null;
+		}
+		return "firstPage?faces-redirect=true";
+	}
+	
+	
 	private void addErrorMessage(Exception exc) {
 		FacesMessage message = new FacesMessage("Error: " + exc.getMessage());
 		FacesContext.getCurrentInstance().addMessage(null, message);

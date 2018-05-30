@@ -12,6 +12,10 @@ public class User {
 	private Integer isAdmin;
 	
 
+	public User() {
+	}
+
+
 	public User(Integer id, String firstName, String lastName, String username, String password, Integer isAdmin) {
 		this.id = id;
 		this.firstName = firstName;
