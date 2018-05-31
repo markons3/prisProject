@@ -12,4 +12,5 @@
 <fullyQualifiedTypeName name="javax.inject.Named"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
 <fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
+<fullyQualifiedTypeName name="java.util.logging.Level"/>
 </qualifiedTypeNameHistroy>

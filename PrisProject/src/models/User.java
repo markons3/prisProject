@@ -10,7 +10,9 @@ public class User {
 	private String username;
 	private String password;
 	private Integer isAdmin;
+	private String outputMsg;
 	
+
 
 	public User() {
 	}
@@ -30,6 +32,15 @@ public class User {
 		return id;
 	}
 
+
+	public String getOutputMsg() {
+		return outputMsg;
+	}
+
+
+	public void setOutputMsg(String outputMsg) {
+		this.outputMsg = outputMsg;
+	}
 
 	public void setId(int id) {
 		this.id = id;
@@ -83,5 +94,4 @@ public class User {
 		}
 		return false;
 	}
-
 }

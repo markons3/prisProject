@@ -4,16 +4,29 @@ import javax.faces.bean.ManagedBean;
 
 @ManagedBean
 public class Book {
+	private int id;
 	private String title;
 	private String author;
 	private String field;
-	private String descritption;
+	private String description;
 	
-	public Book(String title, String author, String field, String descritption) {
+	public Book() {
+	}
+	
+	public Book(Integer id, String title, String author, String field, String description) {
+		this.id = id;
 		this.title = title;
 		this.author = author;
 		this.field = field;
-		this.descritption = descritption;
+		this.description = description;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getTitle() {
@@ -40,12 +53,12 @@ public class Book {
 		this.field = field;
 	}
 
-	public String getDescritption() {
-		return descritption;
+	public String getdescription() {
+		return description;
 	}
 
-	public void setDescritption(String descritption) {
-		this.descritption = descritption;
+	public void setdescription(String description) {
+		this.description = description;
 	}
 
 	

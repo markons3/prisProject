@@ -1,33 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<f:metadata>
+  <f:event type="preRenderView" listener="#{bookController.loadBooks()}"/>
+</f:metadata>
 
 <h:head>
-	<title>Books</title>
-</h:head>
-<h:body>
-	<h1>Books</h1>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<h:dataTable value="#{booksOutput.books}" var="book">
-		<h:column>
-			<f:facet name="header">Title</f:facet>
-				#{book.title}
-			</h:column>
-		<h:column>
-			<f:facet name="header">Author</f:facet>
-				#{book.author}
-			</h:column>
-		<h:column>
-			<f:facet name="header">Field</f:facet>
-				#{book.field}
-			</h:column>
-		<h:column>
-			<f:facet name="header">Description</f:facet>
-				#{book.description}
-			</h:column>
-	</h:dataTable>
-	<td><h:outputLink value="homePage.xhtml">Home Page</h:outputLink></td>
+	<title>Books Output</title>
+	
+	<h:outputStylesheet library="css" name="style.css"  />
+	
+</h:head>
+
+<h:body>
+
+	<div id="wrapper">
+		<div id="header">
+			<h2>Books Output</h2>
+		</div>
+	</div>
+
+	<div id="container">
+
+		<div id="content">
+		
+			<h:messages globalOnly="true" />
+		
+			<h:form> 
+						
+			<h:dataTable value="#{bookController.books}" var="tempBook"
+				styleClass="demo-table" 
+				headerClass="demo-table-header"
+				rowClasses="demo-table-odd-row,demo-table-even-row">
+
+				<h:column>
+					<!-- the column header -->
+					<f:facet name="header">Title</f:facet>
+
+					<!--  the value for each row -->
+					#{tempBook.title}
+				</h:column>
+
+				<h:column>
+					<!-- the column header -->
+					<f:facet name="header">Author</f:facet>
+
+					<!--  the value for each row -->
+					#{tempBook.author}
+				</h:column>
+
+				<h:column>
+					<!-- the column header -->
+					<f:facet name="header">Descrition</f:facet>
+
+					<!--  the value for each row -->
+					#{tempBook.description}
+				</h:column>
+				
+				<h:column>
+					<!-- the column header -->
+					<f:facet name="header">Field</f:facet>
+
+					<!--  the value for each row -->
+					#{tempBook.field}
+				</h:column>
+
+			</h:dataTable>
+
+			</h:form>
+
+		</div>
+		
+	</div>
+
 </h:body>
 </html>

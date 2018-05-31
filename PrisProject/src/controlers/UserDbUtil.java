@@ -108,6 +108,49 @@ public class UserDbUtil {
 		
 	}
 	
+	public User loginUser(String usrname, String pwd) throws Exception {
+	
+		Connection myConn = null;
+		PreparedStatement myStmt = null;
+		ResultSet myRs = null;
+		
+		try {
+			myConn = getConnection();
+
+			String sql = "select * from User where username=? and password=?";
+
+			myStmt = myConn.prepareStatement(sql);
+			
+			// set params
+			myStmt.setString(1, usrname);
+			myStmt.setString(2, pwd);
+			myRs = myStmt.executeQuery();
+
+			User theUser = null;
+			
+			// retrieve data from result set row
+			if (myRs.next()) {
+				int id = myRs.getInt("id");
+				String firstName = myRs.getString("firstName");
+				String lastName = myRs.getString("lastName");
+				String username = myRs.getString("username");
+				String password = myRs.getString("password");
+				int isAdmin = myRs.getInt("isAdmin");
+				
+
+				theUser = new User(id, firstName, lastName, username, password, isAdmin);
+			}
+			else {
+				throw new Exception("Could not find User with username: " + usrname);
+			}
+
+			return theUser;
+		}
+		finally {
+			close (myConn, myStmt, myRs);
+		}
+	}
+	
 	public User getUser(int UserId) throws Exception {
 	
 		Connection myConn = null;

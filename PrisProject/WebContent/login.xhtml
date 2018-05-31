@@ -11,15 +11,15 @@
 	<h:form>
 		<table>
 			<tr>
-				<td><h:inputText id="username" value="#{username}"
+				<td><h:inputText id="username" value="#{user.username}"
 						a:placeholder="Username" /></td>
 			</tr>
 			<tr>
-				<td><h:inputSecret id="password" value="#{password}"
+				<td><h:inputSecret id="password" value="#{user.password}"
 						a:placeholder="Password" /></td>
 			</tr>
 			<tr>
-				<td><h:commandButton value="Submit" action="response" /></td>
+				<td><h:commandButton value="Submit" action="#{userController.loginUser(user.username,user.password)}" /></td>
 			</tr>
 			<tr>
 				<td><h:outputLink value="homePage.xhtml">Home Page</h:outputLink></td>

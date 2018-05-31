@@ -20,7 +20,8 @@ public class UserController {
 	private List<User> users;
 	private UserDbUtil userDbUtil;
 	private Logger logger = Logger.getLogger(getClass().getName());
-	
+	private String msg = "";
+
 	public UserController() throws Exception {
 		users = new ArrayList<>();
 		userDbUtil = UserDbUtil.getInstance();
@@ -30,6 +31,15 @@ public class UserController {
 		return users;
 	}
 
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	
 	public void loadUsers() {
 
 		logger.info("Loading Users");
@@ -63,6 +73,22 @@ public class UserController {
 		return "firstPage?faces-redirect=true";
 	}
 	
+	public String loginUser(String usrname, String password) {
+		logger.info("Logging user with username: " + usrname);
+		try { 
+			if (userDbUtil.loginUser(usrname,password) != null) {
+				return "booksOutput?faces-redirect=true";
+			} else {
+				this.msg = "Invalid User!";
+				this.users = new ArrayList<>();
+				return "login";
+			}
+		} catch (Exception e) {
+			logger.log(Level.SEVERE, "Error logging user", e);
+			addErrorMessage(e);
+			return null;
+		}
+	}
 	
 	private void addErrorMessage(Exception exc) {
 		FacesMessage message = new FacesMessage("Error: " + exc.getMessage());
