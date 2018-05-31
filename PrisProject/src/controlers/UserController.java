@@ -77,7 +77,7 @@ public class UserController {
 		logger.info("Logging user with username: " + usrname);
 		try { 
 			if (userDbUtil.loginUser(usrname,password) != null) {
-				return "booksOutput?faces-redirect=true";
+				return "loggedInPage?faces-redirect=true";
 			} else {
 				this.msg = "Invalid User!";
 				this.users = new ArrayList<>();

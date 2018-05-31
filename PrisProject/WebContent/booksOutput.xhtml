@@ -4,7 +4,7 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <f:metadata>
-  <f:event type="preRenderView" listener="#{bookController.loadBooks()}"/>
+	<f:event type="preRenderView" listener="#{bookController.loadBooks()}" />
 </f:metadata>
 
 <h:head>
@@ -12,9 +12,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<title>Books Output</title>
-	
-	<h:outputStylesheet library="css" name="style.css"  />
-	
+
+	<h:outputStylesheet library="css" name="style.css" />
+
 </h:head>
 
 <h:body>
@@ -28,55 +28,58 @@
 	<div id="container">
 
 		<div id="content">
-		
+
 			<h:messages globalOnly="true" />
-		
-			<h:form> 
-						
-			<h:dataTable value="#{bookController.books}" var="tempBook"
-				styleClass="demo-table" 
-				headerClass="demo-table-header"
-				rowClasses="demo-table-odd-row,demo-table-even-row">
 
-				<h:column>
-					<!-- the column header -->
-					<f:facet name="header">Title</f:facet>
+			<h:form>
 
-					<!--  the value for each row -->
+				<h:dataTable value="#{bookController.books}" var="tempBook"
+					styleClass="demo-table" headerClass="demo-table-header"
+					rowClasses="demo-table-odd-row,demo-table-even-row">
+
+					<h:column>
+						<!-- the column header -->
+						<f:facet name="header">Title</f:facet>
+
+						<!--  the value for each row -->
 					#{tempBook.title}
 				</h:column>
 
-				<h:column>
-					<!-- the column header -->
-					<f:facet name="header">Author</f:facet>
+					<h:column>
+						<!-- the column header -->
+						<f:facet name="header">Author</f:facet>
 
-					<!--  the value for each row -->
+						<!--  the value for each row -->
 					#{tempBook.author}
 				</h:column>
 
-				<h:column>
-					<!-- the column header -->
-					<f:facet name="header">Descrition</f:facet>
+					<h:column>
+						<!-- the column header -->
+						<f:facet name="header">Descrition</f:facet>
 
-					<!--  the value for each row -->
+						<!--  the value for each row -->
 					#{tempBook.description}
 				</h:column>
-				
-				<h:column>
-					<!-- the column header -->
-					<f:facet name="header">Field</f:facet>
 
-					<!--  the value for each row -->
+					<h:column>
+						<!-- the column header -->
+						<f:facet name="header">Field</f:facet>
+
+						<!--  the value for each row -->
 					#{tempBook.field}
 				</h:column>
 
-			</h:dataTable>
+				</h:dataTable>
 
 			</h:form>
 
 		</div>
-		
-	</div>
 
+		<div style="clear: both;"></div>
+
+		<p>
+			<h:outputLink value="loggedInPage.xhtml">Back to previous page</h:outputLink>
+		</p>
+	</div>
 </h:body>
 </html>
